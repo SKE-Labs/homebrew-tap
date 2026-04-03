@@ -5,21 +5,21 @@
 class Lightrace < Formula
   desc "CLI for self-hosting Lightrace — LLM tracing and observability"
   homepage "https://github.com/SKE-Labs/lightrace"
-  version "0.1.13"
+  version "0.1.14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.13/lightrace_0.1.13_darwin_amd64.tar.gz"
-      sha256 "d35c79ba2a747eb84f0a0f1790dd08200bba3db02d158ac989a5cf1de7ee5531"
+      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.14/lightrace_0.1.14_darwin_amd64.tar.gz"
+      sha256 "6a8e4f263d9fabef74a0b63c2dbe8e052b6f5eaa609db39aac355130792ec40b"
 
       define_method(:install) do
         bin.install "lightrace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.13/lightrace_0.1.13_darwin_arm64.tar.gz"
-      sha256 "27299a16b07681df6c1ed2f7cc7ee996dfd06b8e73c489d9095a23b3486a6ad3"
+      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.14/lightrace_0.1.14_darwin_arm64.tar.gz"
+      sha256 "c95bfd26cd81fa725c52a40cd3002f38e22370c9b7570122a542e1379b21a316"
 
       define_method(:install) do
         bin.install "lightrace"
@@ -29,15 +29,15 @@ class Lightrace < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.13/lightrace_0.1.13_linux_amd64.tar.gz"
-      sha256 "c1237fba7f6d5ecab2fab84ed83e8eb740055587101294b5712057a77a9ed96b"
+      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.14/lightrace_0.1.14_linux_amd64.tar.gz"
+      sha256 "1efc35e4724e6387563589d5be9b01cbe288ad19df9f7a9f468f5c988e9bf40b"
       define_method(:install) do
         bin.install "lightrace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.13/lightrace_0.1.13_linux_arm64.tar.gz"
-      sha256 "59cfbfad4a0d840ae3f9e789df5a3121cd3e757974b0ecbd5664751e1daafd66"
+      url "https://github.com/SKE-Labs/lightrace-cli/releases/download/v0.1.14/lightrace_0.1.14_linux_arm64.tar.gz"
+      sha256 "25795d9b14b3c0b063bfe937440d7eab6775389216cc6a57342fe1013ed34817"
       define_method(:install) do
         bin.install "lightrace"
       end
